@@ -1,7 +1,7 @@
 # ![Logo with chat chain links](./elixir-langchain-link-logo_32px.png) My Elixir AI personal assistent
 
 <p align="center">
-<img src="./priv/static/images/MyAIPersonalAssistent.gif" alt="Start Page" width="600">
+<img src="./priv/static/images/MyAIPersonalAssistent.png" alt="Start Page" width="600">
 </p>
 
 This project is my playaround project on the langchain_demo project using the [Elixir LangChain](https://github.com/brainlid/langchain) library and [Phoenix LiveView](https://www.phoenixframework.org/).
