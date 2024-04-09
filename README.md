@@ -1,5 +1,9 @@
 # ![Logo with chat chain links](./elixir-langchain-link-logo_32px.png) My Elixir AI personal assistent
 
+<p align="center">
+<img src="./priv/static/images/MyAIPersonalAssistent.gif" alt="Start Page" width="600">
+</p>
+
 This project is my playaround project on the langchain_demo project using the [Elixir LangChain](https://github.com/brainlid/langchain) library and [Phoenix LiveView](https://www.phoenixframework.org/).
 
 To start your own Elixir AI personal assistent project:
@@ -23,10 +27,11 @@ Features:
 - Uses Phoenix LiveView [Async Operations](https://hexdocs.pm/phoenix_live_view/Phoenix.LiveView.html#module-async-operations).
 - Use <kbd>ctrl+enter</kbd> to submit a message.
 
-<img src="./priv/static/images/ConversationDemo.gif" alt="Example GIF showing usage with editing and resubmitting" width="400">
+<p align="center">
+<img src="./priv/static/images/ConversationDemo.gif" alt="Example GIF showing usage with editing and resubmitting" width="600">
+</p>
 
 ## Dog Coach (only i swedish atm)
-
 
 Dog coachen is using An [Agent](https://python.langchain.com/docs/modules/agents/) can be sortly described as:
 
@@ -36,7 +41,10 @@ Visit the [Dog Coach](http://localhost:4400/dog_coach) page to meet with your ow
 
 Suggestion: Tell a bit about you dog and ask "hur kan jag förbättra vovves hälsa?" to get started and go from there!
 
-<img src="./priv/static/images/DogCoachDemo.png" alt="Example of dog coach interaction" width="400">
+Example:
+<p align="center">
+<img src="./priv/static/images/DogCoachDemo.png" alt="Example of dog coach interaction" width="600">
+</p>
 
 Features:
 - Context around how the AI is configured is hidden from the user.
