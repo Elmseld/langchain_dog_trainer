@@ -13,7 +13,7 @@ defmodule LangChainDemo.FitnessLogsFixtures do
       |> Enum.into(%{
         activity: "some activity",
         amount: 42,
-        date: ~D[2023-10-06],
+        date: Date.utc_today(),
         units: "some units"
       })
 

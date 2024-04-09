@@ -8,6 +8,7 @@ defmodule LangChainDemoWeb.AgentChatLive.Agent.ChatMessage do
     field :role, Ecto.Enum,
       values: [:system, :user, :assistant, :function, :function_call],
       default: :user
+
     field :hidden, :boolean, default: true
     field(:content, :string)
   end

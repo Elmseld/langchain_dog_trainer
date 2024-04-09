@@ -7,7 +7,23 @@
     </div>
 
     <div class="relative z-0 divide-y divide-gray-200 border-b border-gray-200">
-      <.table id="current-user" rows={[:name, :age, :gender, :timezone, :why, :fitness_experience, :goals, :resources, :limitations, :overall_fitness_plan, :fitness_plan_for_week, :notes]}>
+      <.table
+        id="current-user"
+        rows={[
+          :name,
+          :age,
+          :gender,
+          :timezone,
+          :why,
+          :fitness_experience,
+          :goals,
+          :resources,
+          :limitations,
+          :overall_fitness_plan,
+          :fitness_plan_for_week,
+          :notes
+        ]}
+      >
         <:col :let={field} label="Field"><%= Atom.to_string(field) %></:col>
         <:col :let={field} label="Value"><%= Map.get(@current_user, field) %></:col>
       </.table>
@@ -16,12 +32,15 @@
 
   <div class="py-4 border-b border-t border-gray-200 xl:pt-6 xl:border-t-0">
     <div class="flex items-center">
-      <h1 class="flex-1 text-lg font-medium">Personal Trainer Chat</h1>
+      <h1 class="flex-1 text-lg font-medium">Hund Coach</h1>
     </div>
   </div>
   <ul role="list" class="relative z-0 divide-y divide-gray-200 border-b border-gray-200">
     <%= for message <- @display_messages do %>
-      <li :if={message.role == :function_call} class="relative pl-4 pr-6 py-2 bg-gray-100 hover:bg-gray-200 sm:pl-6 lg:pl-8 xl:pl-6">
+      <li
+        :if={message.role == :function_call}
+        class="relative pl-4 pr-6 py-2 bg-gray-100 hover:bg-gray-200 sm:pl-6 lg:pl-8 xl:pl-6"
+      >
         <div class="flex items-center space-x-4">
           <div class="shrink-0 w-8">
             <div class="text-center">
@@ -35,7 +54,10 @@
           </div>
         </div>
       </li>
-      <li :if={message.role != :function_call} class="relative pl-4 pr-6 py-5 hover:bg-gray-50 sm:py-6 sm:pl-6 lg:pl-8 xl:pl-6">
+      <li
+        :if={message.role != :function_call}
+        class="relative pl-4 pr-6 py-5 hover:bg-gray-50 sm:py-6 sm:pl-6 lg:pl-8 xl:pl-6"
+      >
         <div class="flex items-center space-x-4">
           <div class="shrink-0 w-8">
             <div class="text-center">
@@ -43,7 +65,9 @@
             </div>
           </div>
           <div class="min-w-0 flex-auto">
-            <.markdown :if={message.role == :assistant} text={message.content} />
+            <span :if={message.role == :assistant} class="whitespace-pre-wrap text-indigo-600">
+              <%= message.content %>
+            </span>
             <span :if={message.role != :assistant} class="whitespace-pre-wrap">
               <%= message.content %>
             </span>
@@ -60,7 +84,12 @@
             </div>
           </div>
           <div class="min-w-0 flex-auto">
-            <.markdown :if={@llm_chain.delta.role == :assistant} text={@llm_chain.delta.content} />
+            <span
+              :if={@llm_chain.delta.role == :assistant}
+              class="whitespace-pre-wrap text-indigo-600"
+            >
+              <%= @llm_chain.delta.content %>
+            </span>
             <span :if={@llm_chain.delta.role != :assistant} class="whitespace-pre-wrap">
               <%= @llm_chain.delta.content %>
             </span>

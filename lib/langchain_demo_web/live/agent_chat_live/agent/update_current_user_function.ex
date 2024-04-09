@@ -16,7 +16,8 @@ defmodule LangChainDemoWeb.AgentChatLive.Agent.UpdateCurrentUserFunction do
   def new() do
     Function.new(%{
       name: "update_current_user",
-      description: "Update one or more fields at a time on the user's account and workout information.",
+      description:
+        "Update one or more fields at a time on the user's account and workout information.",
       parameters_schema: %{
         type: "object",
         properties: %{
@@ -26,8 +27,7 @@ defmodule LangChainDemoWeb.AgentChatLive.Agent.UpdateCurrentUserFunction do
           },
           overall_fitness_plan: %{
             type: "string",
-            description:
-              "Description of the user's current overall fitness plan."
+            description: "Description of the user's current overall fitness plan."
           },
           fitness_experience: %{
             type: "string",
@@ -69,8 +69,7 @@ defmodule LangChainDemoWeb.AgentChatLive.Agent.UpdateCurrentUserFunction do
           },
           fitness_plan_for_week: %{
             type: "string",
-            description:
-              "The user's specific workout plan for the week."
+            description: "The user's specific workout plan for the week."
           }
         },
         required: []
