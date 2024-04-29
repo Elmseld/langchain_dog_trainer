@@ -1,4 +1,4 @@
-defmodule LangChainDemoWeb.AgentChatLive.Agent.UpdateCurrentUserFunction do
+defmodule LangChainDemo.Agent.UpdateCurrentUserFunction do
   @moduledoc """
   Defines an UpdateCurrentUserFunction tool for modifying a fitness user's account.
 

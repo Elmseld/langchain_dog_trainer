@@ -1,4 +1,4 @@
-defmodule LangChainDemoWeb.AgentChatLive.Agent.FitnessLogsTool do
+defmodule LangChainDemo.Agent.FitnessLogsTool do
   @moduledoc """
   Defines a set of LLM tools for working with the FitnessLogs linked to the user's account..
   """

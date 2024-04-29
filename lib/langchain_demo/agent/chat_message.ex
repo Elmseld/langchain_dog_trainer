@@ -1,4 +1,4 @@
-defmodule LangChainDemoWeb.AgentChatLive.Agent.ChatMessage do
+defmodule LangChainDemo.Agent.ChatMessage do
   use Ecto.Schema
   import Ecto.Changeset
   alias __MODULE__

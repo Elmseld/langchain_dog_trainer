@@ -2,13 +2,13 @@ defmodule LangChainDemoWeb.AgentChatLive.Index do
   use LangChainDemoWeb, :live_view
 
   alias Phoenix.LiveView.AsyncResult
-  alias LangChainDemoWeb.AgentChatLive.Agent.ChatMessage
+  alias LangChainDemo.Agent.ChatMessage
   alias LangChain.Chains.LLMChain
   alias LangChain.Message
   alias LangChain.ChatModels.ChatOpenAI
   alias LangChain.PromptTemplate
-  alias LangChainDemoWeb.AgentChatLive.Agent.UpdateCurrentUserFunction
-  alias LangChainDemoWeb.AgentChatLive.Agent.FitnessLogsTool
+  alias LangChainDemo.Agent.UpdateCurrentUserFunction
+  alias LangChainDemo.Agent.FitnessLogsTool
   alias LangChainDemo.FitnessUsers
   alias LangChainDemo.FitnessLogs
 
